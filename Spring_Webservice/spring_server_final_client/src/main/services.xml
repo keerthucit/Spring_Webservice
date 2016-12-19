@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- This file was auto-generated from WSDL --><!-- by the Apache Axis2 version: 1.6.2  Built on : Apr 17, 2012 (05:33:49 IST) --><serviceGroup>
+    <service name="GetUserService">
+        <messageReceivers>
+            <messageReceiver mep="http://www.w3.org/ns/wsdl/in-out" class="com.javaguys.webservices.getuserservices.GetUserServiceMessageReceiverInOut"/>
+        </messageReceivers>
+        <parameter name="ServiceClass">com.javaguys.webservices.getuserservices.GetUserServiceSkeleton</parameter>
+        <parameter name="useOriginalwsdl">true</parameter>
+        <parameter name="modifyUserWSDLPortAddress">true</parameter>
+        <operation name="GetUser" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://com/javaguys/webservices/getUserServices">
+            <actionMapping>http://com/javaguys/webservices/getUserServices/GetUserService/GetUserRequest</actionMapping>
+            <outputActionMapping>http://com/javaguys/webservices/getUserServices/GetUserService/GetUserResponse</outputActionMapping>
+        </operation>
+    </service>
+</serviceGroup>

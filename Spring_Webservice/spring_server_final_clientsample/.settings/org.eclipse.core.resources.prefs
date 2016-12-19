@@ -1,0 +1,8 @@
+eclipse.preferences.version=1
+encoding//src/com/blog/javaguys/user/User.java=UTF-8
+encoding//src/com/javaguys/webservices/getUserServices/GetUserRequest.java=UTF-8
+encoding//src/com/javaguys/webservices/getUserServices/GetUserResponse.java=UTF-8
+encoding//src/com/javaguys/webservices/getUserServices/GetUserServiceSoap11Stub.java=UTF-8
+encoding//src/com/javaguys/webservices/getUserServices/GetUserService_PortType.java=UTF-8
+encoding//src/com/javaguys/webservices/getUserServices/GetUserService_Service.java=UTF-8
+encoding//src/com/javaguys/webservices/getUserServices/GetUserService_ServiceLocator.java=UTF-8

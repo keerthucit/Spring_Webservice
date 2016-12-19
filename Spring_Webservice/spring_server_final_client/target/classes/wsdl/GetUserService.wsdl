@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://com/javaguys/webservices/getUserServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://com/javaguys/webservices/getUserServices" xmlns:sch1="http://user.javaguys.blog.com" xmlns:sch0="http://com/javaguys/webservices/getUserServices" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://com/javaguys/webservices/getUserServices" xmlns="http://com/javaguys/webservices/getUserServices" xmlns:user="http://user.javaguys.blog.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<xsd:import namespace="http://user.javaguys.blog.com"/>
+
+
+<xsd:element name="GetUserRequest">
+
+
+<xsd:complexType>
+
+
+<xsd:sequence>
+
+<xsd:element name="userId" type="xsd:string"/>
+
+</xsd:sequence>
+
+</xsd:complexType>
+
+</xsd:element>
+
+
+<xsd:element name="GetUserResponse">
+
+
+<xsd:complexType>
+
+
+<xsd:sequence>
+
+<xsd:element name="userDetails" type="user:User"/>
+
+</xsd:sequence>
+
+</xsd:complexType>
+
+</xsd:element>
+
+</xsd:schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://user.javaguys.blog.com" xmlns="http://user.javaguys.blog.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="User" type="User"/>
+
+
+<xs:complexType name="User">
+
+
+<xs:sequence>
+
+<xs:element name="UserId" type="xs:string"/>
+
+<xs:element name="UserName" type="xs:string"/>
+
+<xs:element name="UserGender" type="xs:string"/>
+
+<xs:element name="UserStatus" type="xs:string"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetUserRequest">
+    <wsdl:part name="GetUserRequest" element="tns:GetUserRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetUserResponse">
+    <wsdl:part name="GetUserResponse" element="tns:GetUserResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="GetUserService">
+    <wsdl:operation name="GetUser">
+      <wsdl:input name="GetUserRequest" message="tns:GetUserRequest">
+    </wsdl:input>
+      <wsdl:output name="GetUserResponse" message="tns:GetUserResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetUserServiceSoap11" type="tns:GetUserService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetUser">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="GetUserRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetUserResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetUserService">
+    <wsdl:port name="GetUserServiceSoap11" binding="tns:GetUserServiceSoap11">
+      <soap:address location="http://localhost:8080/spring-server-final/endpoints"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
