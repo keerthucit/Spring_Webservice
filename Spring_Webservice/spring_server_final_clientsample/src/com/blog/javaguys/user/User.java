@@ -8,18 +8,18 @@
 package com.blog.javaguys.user;
 
 public class User  implements java.io.Serializable {
-    private java.lang.String userId;
+  //  private java.lang.String userId;
 
-    private java.lang.String userName;
+   // private java.lang.String userName;
 
-    private java.lang.String userGender;
+   // private java.lang.String userGender;
 
-    private java.lang.String userStatus;
+    //private java.lang.String userStatus;
 
-    public User() {
-    }
+    //public User() {
+   // }
 
-    public User(
+  /*  public User(
            java.lang.String userId,
            java.lang.String userName,
            java.lang.String userGender,
@@ -29,7 +29,7 @@ public class User  implements java.io.Serializable {
            this.userGender = userGender;
            this.userStatus = userStatus;
     }
-
+*/
 
     /**
      * Gets the userId value for this User.
